@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/ -->
+<html lang="en-US" class=" js no-touch csstransitions" style="height: auto;"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Using Git with Visual Studio 2010, an introduction | DiscountASP.NET</title>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://blog.discountasp.net/xmlrpc.php">
+	<!--[if lt IE 9]>
+	<script src="https://blog.discountasp.net/wp-content/themes/twentythirteen/js/html5.js"></script>
+	<![endif]-->
+	<link rel="dns-prefetch" href="https://s0.wp.com/">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link href="https://fonts.gstatic.com/" crossorigin="" rel="preconnect">
+<link rel="alternate" type="application/rss+xml" title="DiscountASP.NET » Feed" href="https://blog.discountasp.net/feed/">
+<link rel="alternate" type="application/rss+xml" title="DiscountASP.NET » Comments Feed" href="https://blog.discountasp.net/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="DiscountASP.NET » Using Git with Visual Studio 2010, an introduction Comments Feed" href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/feed/">
+<link rel="stylesheet" id="twentythirteen-style-css" href="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="DiscountASP.NET-css" href="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/style(1).css" type="text/css" media="all">
+<link rel="stylesheet" id="twentythirteen-fonts-css" href="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="genericons-css" href="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/genericons.css" type="text/css" media="all">
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentythirteen-ie-css'  href='https://blog.discountasp.net/wp-content/themes/twentythirteen/css/ie.css?ver=2013-07-18' type='text/css' media='all' />
+<![endif]-->
+<link rel="stylesheet" id="jetpack-widget-social-icons-styles-css" href="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/social-icons.css" type="text/css" media="all">
+<link rel="stylesheet" id="social-logos-css" href="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/social-logos.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack_css-css" href="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/jetpack.css" type="text/css" media="all">
+<link rel="stylesheet" id="jquery.lightbox.min.css-css" href="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/lightbox.min.css" type="text/css" media="all">
+<script src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/1045126505516050" async=""></script><script async="" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/fbevents.js.téléchargement"></script><script src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/0893.js.téléchargement" async="" type="text/javascript"></script><script type="text/javascript" async="" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/tracking.js.téléchargement"></script><script src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/bat.js.téléchargement" async=""></script><script async="" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/analytics.js.téléchargement"></script><script type="text/javascript" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/jquery.js.téléchargement"></script>
+<script type="text/javascript" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/jquery-migrate.min.js.téléchargement"></script>
+<link rel="https://api.w.org/" href="https://blog.discountasp.net/wp-json/">
+<link rel="prev" title="Ever wonder how Google updates their search algorithms?" href="https://blog.discountasp.net/ever-wonder-how-google-updates-their-search-algorithms/">
+<link rel="next" title="Vote for DiscountASP.NET in the 2011 DevProConnections Community Choice Awards" href="https://blog.discountasp.net/vote-for-discountasp-net-at-the-2011-devproconnections-community-choice-awards/">
+<link rel="canonical" href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/">
+<link rel="shortlink" href="https://blog.discountasp.net/?p=2998">
+<link rel="alternate" type="application/json+oembed" href="https://blog.discountasp.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblog.discountasp.net%2Fusing-git-with-visual-studio-2010-an-introduction-2%2F">
+
+    <link href="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/css(1)" rel="stylesheet" type="text/css">
+    <link href="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/bootstrap.css" rel="stylesheet">
+    <link href="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/font-awesome.css" rel="stylesheet">
+    <link href="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/fontello.css" rel="stylesheet">
+    <link href="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/animations.css" rel="stylesheet" type="text/css">
+    <link href="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/style(2).css" rel="stylesheet">
+
+	<style type="text/css" id="twentythirteen-header-css">
+		.site-title,
+	.site-description {
+		position: absolute;
+		clip: rect(1px 1px 1px 1px); /* IE7 */
+		clip: rect(1px, 1px, 1px, 1px);
+	}
+		.site-header .home-link {
+	min-height: 0;
+	}
+		</style>
+	<link rel="amphtml" href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/amp/">
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Using Git with Visual Studio 2010, an introduction">
+<meta property="og:url" content="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/">
+<meta property="og:description" content="After taking point for our Team Foundation Server hosting service, it’s been a very busy past 10 months as I’ve been involved in: Sharing the knowledge that we’ve acquired in the …">
+<meta property="article:published_time" content="2011-09-01T19:30:47+00:00">
+<meta property="article:modified_time" content="2013-01-28T18:14:00+00:00">
+<meta property="og:site_name" content="DiscountASP.NET">
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:text:title" content="Using Git with Visual Studio 2010, an introduction">
+<meta name="twitter:card" content="summary">
+
+<!-- End Jetpack Open Graph Tags -->
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+			<style type="text/css" id="wp-custom-css">
+				.entry-content a, .comment-content a {
+  color: #0088CC;
+	text-decoration: underline;
+	font-weight: normal;
+}
+
+.smalltxt {
+	font-size: 80%;
+}			</style>
+		<script src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/tp.widget.bootstrap.min.js.téléchargement" async=""></script><script src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/f.txt"></script><script async="true" type="text/javascript" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/roundtrip.js.téléchargement"></script><script type="text/javascript" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/MFLMWEESPBA6ZODOCPMXZS"></script><script async="true" type="text/javascript" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/AQ4FUT7LMFFSJBRILOUWYZ"></script><div style="width: 1px; height: 1px; display: inline; position: absolute;"><img height="1" width="1" style="border-style:none;" alt="" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/out"><img height="1" width="1" style="border-style:none;" alt="" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/out(1)"><img height="1" width="1" style="border-style:none;" alt="" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/out(2)"><img height="1" width="1" style="border-style:none;" alt="" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/out(3)"><img height="1" width="1" style="border-style:none;" alt="" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/out(4)"><img height="1" width="1" style="border-style:none;" alt="" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/out(5)"><img height="1" width="1" style="border-style:none;" alt="" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/out(6)"></div><div style="width: 1px; height: 1px; display: inline; position: absolute;"><img height="1" width="1" style="border-style:none;" alt="" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/out(7)">
+<img height="1" width="1" style="border-style:none;" alt="" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/out(8)">
+<img height="1" width="1" style="border-style:none;" alt="" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/out(9)">
+<img height="1" width="1" style="border-style:none;" alt="" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/out(10)">
+<img height="1" width="1" style="border-style:none;" alt="" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/out(11)">
+<img height="1" width="1" style="border-style:none;" alt="" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/out(12)">
+</div></head>
+
+<body class="fixed-header-on" cz-shortcut-listen="true">
+
+        <div class="scrollToTop circle" style="display: block;"><i class="icon-up-open-big"></i></div>
+        <div class="page-wrapper">
+
+            <!-- Begin Navigation -->
+            <div class="header-container" style="padding-bottom: 83px;">
+                <header class="header dark fixed clearfix animated object-visible fadeInDown">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="header-left clearfix" style="padding-bottom: 12px;">
+                                    <a href="https://blog.discountasp.net/"><img src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/discountASP-NET-logo.png" alt="DiscountASP.NET Hosting"></a>
+                                </div>
+                            </div>
+
+                            <div class="col-md-10">
+                                <div class="header-right clearfix">
+                                    <div class="main-navigation animated with-dropdown-buttons">
+
+                                        <nav class="navbar navbar-default" role="navigation">
+                                            <div class="container-fluid">
+
+                                                <div class="navbar-header">
+                                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                                                        <span class="sr-only">Toggle navigation</span>
+                                                        <span class="icon-bar"></span>
+                                                        <span class="icon-bar"></span>
+                                                        <span class="icon-bar"></span>
+                                                    </button>
+                                                </div>
+
+                                                <div class="collapse navbar-collapse" id="navbar-collapse-1" style="padding-top: 6px; padding-right: 0;">
+
+                                                    <!-- main-menu items start -->
+
+                                                    <ul class="nav navbar-nav ">
+
+                                                        <!-- nav item 1 -->
+
+                                                        <li class="dropdown">
+                                                            <a class="dropdown-toggle" data-toggle="dropdown">ASP.NET hosting</a>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a href="https://discountasp.net/asp.net-hosting/plan/">List of plan features</a></li>
+                                                                <li><a href="https://discountasp.net/asp.net-hosting/">Shared Windows hosting</a></li>
+                                                                <li><a href="https://discountasp.net/cloud-hosting/">Windows cloud hosting</a></li>
+                                                                <li class="dropdown">
+                                                                    <a class="dropdown-toggle" data-toggle="dropdown">Database hosting  »</a>
+                                                                    <ul class="dropdown-menu">
+                                                                        <li><a href="https://discountasp.net/database-hosting/shared-sql/">Shared Microsoft SQL</a></li>
+                                                                        <li><a href="https://discountasp.net/database-hosting/mysql/">MySQL</a></li>
+                                                                        <li><a href="https://discountasp.net/database-hosting/private-sql/">Private Microsoft SQL</a></li>
+                                                                        <li><a href="https://discountasp.net/database-hosting/private-sql/">Private MySQL</a></li>
+                                                                        <li><a href="https://discountasp.net/database-hosting/private-sql/">Private MongoDB</a></li>
+                                                                        <li><a href="https://discountasp.net/database-hosting/sql-reporting-services/">SQL Reporting Services</a></li>
+                                                                        <li><a href="https://discountasp.net/database-hosting/sql-profiler/">SQL Server Profiler</a></li>
+                                                                        <li><a href="https://discountasp.net/database-hosting/sql-tools/">SQL tools</a></li>
+                                                                        <li><a href="https://discountasp.net/database-hosting/access/">Microsoft Access</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li style="background-color: #3b4042"><a href="https://discountasp.net/cloud-hosting/custom-private-cloud/">Custom solutions</a></li>
+                                                                <li><a href="https://discountasp.net/asp.net-hosting/international-datacenters/">International hosting</a></li>
+                                                                <li><a href="https://discountasp.net/asp.net-hosting/asp.net-versions/">Supported ASP.NET versions</a></li>
+                                                                <li><a href="https://discountasp.net/asp.net-hosting/asp.net-core/">ASP.NET Core</a></li>
+                                                                <li><a href="https://discountasp.net/asp.net-hosting/asp.net-mvc/">ASP.NET MVC</a></li>
+                                                                <li><a href="https://discountasp.net/asp.net-hosting/asp-hosting/">ASP hosting</a></li>
+                                                                <li><a href="https://discountasp.net/asp.net-hosting/faq/">FAQ</a></li>
+                                                            </ul>
+                                                        </li>
+
+                                                        <!-- nav item 2 -->
+
+                                                        <li>
+                                                            <a href="https://discountasp.net/tfs-hosting/">TFS hosting</a>
+                                                        </li>
+
+                                                        <!-- nav item 3 -->
+
+                                                        <li class="dropdown">
+                                                            <a class="dropdown-toggle" data-toggle="dropdown">Solutions</a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="dropdown">
+                                                                    <a class="dropdown-toggle" data-toggle="dropdown">Control Panel  »</a>
+                                                                    <ul class="dropdown-menu">
+                                                                        <li><a href="https://discountasp.net/control-panel/overview/">Overview</a></li>
+                                                                        <li><a href="https://demo.discountasp.net/" target="_blank">Control Panel live demo</a></li>
+                                                                        <li><a href="https://discountasp.net/control-panel/application-installer/">Application installer</a></li>
+                                                                        <li><a href="https://discountasp.net/control-panel/api/">API</a></li>
+                                                                        <li><a href="https://discountasp.net/control-panel/master-control-panel/">Master Control Panel</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li><a href="https://discountasp.net/asp.net-hosting/visual-studio/">Visual Studio</a></li>
+                                                                <li class="dropdown">
+                                                                    <a class="dropdown-toggle" data-toggle="dropdown">E-Commerce hosting  »</a>
+                                                                    <ul class="dropdown-menu">
+                                                                        <li><a href="https://discountasp.net/asp.net-hosting/ecommerce-hosting/nopcommerce/">nopCommerce</a></li>
+                                                                        <li><a href="https://discountasp.net/asp.net-hosting/ecommerce-hosting/shoppingcart-dot-net/">ShoppingCart.net</a></li>
+                                                                        <li><a href="https://discountasp.net/asp.net-hosting/ecommerce-hosting/vevocart/">VevoCart</a></li>
+                                                                        <li><a href="https://discountasp.net/asp.net-hosting/ecommerce-hosting/znode/">Znode</a></li>
+                                                                        <li><a href="https://discountasp.net/asp.net-hosting/ecommerce-hosting/dotnetinvoice/">DotNetInvoice</a></li>
+                                                                    </ul>
+                                                                </li>                                                                
+                                                                <li class="dropdown">
+                                                                    <a class="dropdown-toggle" data-toggle="dropdown">CMS application hosting  »</a>
+                                                                    <ul class="dropdown-menu">
+                                                                        <li><a href="https://discountasp.net/asp.net-hosting/cms-hosting/dotnetnuke/">DotNetNuke (DNN)</a></li>
+                                                                        <li><a href="https://discountasp.net/asp.net-hosting/cms-hosting/drupal/">Drupal</a></li>
+                                                                        <li><a href="https://discountasp.net/asp.net-hosting/cms-hosting/joomla/">Joomla</a></li>
+                                                                        <li><a href="https://discountasp.net/asp.net-hosting/cms-hosting/kentico/">Kentico</a></li>
+                                                                        <li><a href="https://discountasp.net/asp.net-hosting/cms-hosting/mojoportal/">mojoPortal</a></li>
+                                                                        <li><a href="https://discountasp.net/asp.net-hosting/cms-hosting/orchard/">Orchard</a></li>
+                                                                        <li><a href="https://discountasp.net/asp.net-hosting/cms-hosting/sitefinity/">Sitefinity</a></li>
+                                                                        <li><a href="https://discountasp.net/asp.net-hosting/cms-hosting/umbraco/">Umbraco</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="dropdown">
+                                                                    <a class="dropdown-toggle" data-toggle="dropdown">Blog hosting  »</a>
+                                                                    <ul class="dropdown-menu">
+                                                                        <li><a href="https://discountasp.net/asp.net-hosting/blog-hosting/wordpress/">WordPress</a></li>
+                                                                        <li><a href="https://discountasp.net/asp.net-hosting/blog-hosting/blogengine/">BlogEngine.NET</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="dropdown">
+                                                                    <a class="dropdown-toggle" data-toggle="dropdown">Forum hosting  »</a>
+                                                                    <ul class="dropdown-menu">
+                                                                        <li><a href="https://discountasp.net/asp.net-hosting/forum-hosting/yet-another-forum/">YetAnotherForum</a></li>
+                                                                    </ul>
+                                                                </li>                                                                
+                                                                <li><a href="https://discountasp.net/asp.net-hosting/php-hosting/">PHP hosting</a></li>
+                                                                <li class="dropdown">
+                                                                    <a class="dropdown-toggle" data-toggle="dropdown">Legacy technologies  »</a>
+                                                                    <ul class="dropdown-menu">
+                                                                        <li><a href="https://discountasp.net/asp.net-hosting/legacy-hosting/silverlight/">Silverlight</a></li>
+                                                                        <li><a href="https://discountasp.net/asp.net-hosting/legacy-hosting/webmatrix/">WebMatrix</a></li>
+                                                                        <li><a href="https://discountasp.net/asp.net-hosting/legacy-hosting/expression/">Expression</a></li>
+                                                                        <li><a href="https://discountasp.net/asp.net-hosting/legacy-hosting/lightswitch/">Lightswitch</a></li>
+                                                                        <li><a href="https://discountasp.net/asp.net-hosting/legacy-hosting/frontpage/">FrontPage</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li style="background-color: #3b4042"><a href="https://discountasp.net/cloud-hosting/custom-private-cloud/">Custom solutions</a></li>
+                                                            </ul>
+                                                        </li>
+
+                                                        <!-- nav item 4 -->
+
+                                                                <li class="dropdown">
+                                                                    <a class="dropdown-toggle" data-toggle="dropdown">Services</a>
+                                                                    <ul class="dropdown-menu">
+                                                                        <li><a href="https://discountasp.net/services/domain-registration/">Domain registration</a></li>
+                                                                        <li><a href="https://discountasp.net/services/ssl-certificates/">SSL | SSL certificates</a></li>
+                                                                        <li><a href="https://discountasp.net/services/pci-scanning/">PCI scanning</a></li>
+                                                                        <li><a href="https://discountasp.net/services/cloud-backup/">Cloud Backup</a></li>
+                                                                        <li><a href="https://discountasp.net/services/security/">Website security</a></li>
+                                                                        <li><a href="https://discountasp.net/services/activesync/">Exchange ActiveSync</a></li>
+                                                                        <li><a href="https://discountasp.net/services/spamexperts/">SpamExperts</a></li>
+                                                                        <li><a href="https://discountasp.net/services/site-migration/">Site migration</a></li>
+                                                                    </ul>
+                                                                </li>
+
+                                                        <!-- nav item 5 -->
+
+                                                        <li class="dropdown">
+                                                            <a class="dropdown-toggle" data-toggle="dropdown">Support</a>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a href="https://discountasp.net/support/">Overview</a></li>
+                                                                <li><a href="https://community.discountasp.net/forums/outages-and-maintenance.34/" target="_blank">Network status</a></li>
+                                                                <li><a href="https://support.discountasp.net/" target="_blank">Helpdesk</a></li>
+                                                                <li><a href="https://support.discountasp.net/kb/c214/discountasp-everleap.aspx" target="_blank">Knowledge Base</a></li>
+                                                                <li><a href="https://community.discountasp.net/" target="_blank">Community Forum</a></li>
+                                                                <li><a href="https://my.discountasp.net/">Control Panel log in</a></li>
+                                                            </ul>
+                                                        </li>
+
+                                                        <!-- nav item 6 -->
+
+                                                        <li class="dropdown" style="">
+                                                            <a class="dropdown-toggle" data-toggle="dropdown">Affiliates</a>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a href="https://discountasp.net/affiliate/overview/">Affiliate program overview</a></li>
+                                                                <li><a href="https://discountasp.net/affiliate/faq/">Affiliate program FAQ</a></li>
+                                                                <li><a href="https://discountasp.net/affiliate/">Affiliate program sign up</a></li>
+                                                            </ul>
+                                                        </li>
+
+                                                        <!-- nav item 7 -->
+
+                                                        <li class="dropdown" style="">
+                                                            <a class="dropdown-toggle" data-toggle="dropdown">About us</a>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a href="https://discountasp.net/about-us/company-history/">Our story</a></li>
+                                                                <li><a href="https://discountasp.net/about-us/microsoft-partner/">Microsoft Hosting Partner</a></li>
+                                                                <li><a href="https://discountasp.net/about-us/reviews/">Reviews &amp; Testimonials</a></li>
+                                                                <li><a href="https://blog.discountasp.net/" target="_blank">Blog</a></li>
+                                                                <li><a href="https://discountasp.net/about-us/sponsorships/">Sponsorships</a></li>
+                                                                <li><a href="https://discountasp.net/about-us/news/">News</a></li>
+                                                                <li><a href="https://discountasp.net/about-us/awards/">Awards</a></li>
+                                                                <li><a href="https://discountasp.net/about-us/partners/">Partners</a></li>
+                                                                <li><a href="https://discountasp.net/about-us/contact/">Contact us</a></li>
+                                                            </ul>
+                                                        </li>
+
+                                                        <!-- nav item 8 -->
+
+                                                        <li><a href="https://discountasp.net/signup/"><span class="navsignup btn radius-0 btn-success btn-sm">Sign up</span></a></li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </header>
+
+            </div>
+            <!-- End Navigation -->
+
+    <div class="container defaultpage" style="padding-top: 7px">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+          <div class="row" style="margin-top: 35px">
+            <div class="col-md-10">  
+
+						
+				<article id="post-2998" class="post-2998 post type-post status-publish format-standard hentry category-miscellaneous">
+	<header class="entry-header">
+		
+				<h1 class="entry-title">Using Git with Visual Studio 2010, an introduction</h1>
+		
+		<div class="entry-meta">
+			<span class="date"><a href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/" title="Permalink to Using Git with Visual Studio 2010, an introduction" rel="bookmark"><time class="entry-date" datetime="2011-09-01T12:30:47+00:00">September 1, 2011</time></a></span><span class="categories-links"><a href="https://blog.discountasp.net/category/miscellaneous/" rel="category tag">Miscellaneous</a></span><span class="author vcard"><a class="url fn n" href="https://blog.discountasp.net/author/joseph/" title="View all posts by Joseph" rel="author">Joseph</a></span>					</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+<!--added excerpts for author, tags, archives and category pages -->
+		<div class="entry-content">
+
+		<p><img class="alignleft" style="margin-right: 25px; margin-top: 5px; margin-bottom: 25px;" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/BlogJunDASP.jpg" alt="" height="104" width="79">After taking point for our <a href="http://discountasp.net/tfs/">Team Foundation Server hosting service</a>, it’s been a very busy past 10 months as I’ve been involved in:</p>
+<ul>
+<li>Sharing the knowledge that we’ve acquired in the <a href="http://tfs.discountasp.net/KB/c243/team-foundation-server.aspx">TFS Knowledge Base</a></li>
+<li>Publishing technical information through the <a href="http://tfs.discountasp.net/KB/c243/team-foundation-server.aspx">DiscountASP.NET Blog</a></li>
+<li>Handling <a href="http://discountasp.net/tfs/migrating-to-hosted-tfs.aspx">migration services to the DiscountASP.NET TFS server</a></li>
+<li>Introducing <a href="http://discountasp.net/tfs/hosted-tfs-build-server.aspx">Build Server as an additional service</a></li>
+</ul>
+<p>One of the luxuries that I’ve also been afforded is some time to play around with other technologies involved in the ALM process beyond Team Foundation Server itself. In the past few months, I’ve spent a considerable amount of time working with <a href="http://en.wikipedia.org/wiki/Git_%28software%29">Git</a> and I thought I’d take a moment to share some information from the perspective of someone who has been using Visual Studio 2010 exclusively.</p>
+<p>Doing some work from the command-line isn’t a foreign concept to me but after having spent so much time getting used to working from Visual Studio directly, there was a bit of a learning curve involved because I’ll admit it, I’m a “clicker.”</p>
+<p>If you’re moving into Git or it’s been something that you’ve been considering but think there’s a high learning curve involved, understanding and using the command-line is absolutely essential, however, there are ways to have a normal workflow using Git and Visual Studio 2010.</p>
+<p>I won’t be taking an in-depth look at Git but I’ll be focusing on simplifying things a bit by using Git Extensions and Git Source Control Provider.</p>
+<p>Git Extensions offers a GUI that you can work with while you become accustomed to using the command-line and Git Source Control Provider is a plug-in for Visual Studio that includes functionality and features in the Solution Explorer that you’re probably used to.</p>
+<p>First, download and install <a href="http://code.google.com/p/gitextensions/">Git Extensions</a>.</p>
+<p>Next, you’ll need to pick up <a href="http://gitscc.codeplex.com/releases/view/46589">Git Source Control Provider at CodePlex</a> for Visual Studio 201 and run the GitSccProvider.vsix to install the plug-in or access the Extension Manager from the Tools menu and install Git Source Control Provider.</p>
+<p>Once you’ve completed the installations, launch Visual Studio 2010 and then change the source control plug-in by opening the Tools menu and selecting the Options menu item. Check the “Show all settings” box, select the “Source Control” option and set the plug-in to “Git Source Control Provider.”</p>
+<p><a href="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/Visual-Studio-2010-Source-Control-Plug-in-Selection.png" rel="lightbox[2998]"><img class="aligncenter size-full wp-image-3009" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/Visual-Studio-2010-Source-Control-Plug-in-Selection.png" alt="" height="432" width="749" srcset="https://blog.discountasp.net/wp-content/uploads/2011/08/Visual-Studio-2010-Source-Control-Plug-in-Selection.png 749w, https://blog.discountasp.net/wp-content/uploads/2011/08/Visual-Studio-2010-Source-Control-Plug-in-Selection-300x173.png 300w" sizes="(max-width: 749px) 100vw, 749px"></a></p>
+<p>While you have the Options window open, click on the “Git Source Control Provider Options” to make sure that the paths are set properly.</p>
+<p><a href="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/Visual-Studio-2010-Source-Control-Git-Source-Control-Provider-Options.png" rel="lightbox[2998]"><img class="aligncenter size-full wp-image-3008" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/Visual-Studio-2010-Source-Control-Git-Source-Control-Provider-Options.png" alt="" height="430" width="747" srcset="https://blog.discountasp.net/wp-content/uploads/2011/08/Visual-Studio-2010-Source-Control-Git-Source-Control-Provider-Options.png 747w, https://blog.discountasp.net/wp-content/uploads/2011/08/Visual-Studio-2010-Source-Control-Git-Source-Control-Provider-Options-300x172.png 300w" sizes="(max-width: 747px) 100vw, 747px"></a></p>
+<p>I’ll be creating a new Web Application Project but you can use an existing Project. Right-click on the Project name and then click on the “Git – New Repository” menu item.</p>
+<p><a href="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/Visual-Studio-2010-Solution-Explorer-Git-New-Repository.png" rel="lightbox[2998]"><img class="aligncenter size-full wp-image-3003" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/Visual-Studio-2010-Solution-Explorer-Git-New-Repository.png" alt="" height="651" width="379" srcset="https://blog.discountasp.net/wp-content/uploads/2011/08/Visual-Studio-2010-Solution-Explorer-Git-New-Repository.png 379w, https://blog.discountasp.net/wp-content/uploads/2011/08/Visual-Studio-2010-Solution-Explorer-Git-New-Repository-174x300.png 174w" sizes="(max-width: 379px) 100vw, 379px"></a></p>
+<p>You can open the Project folder through Windows Explorer to make sure that everything’s been created properly.</p>
+<p><a href="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/Windows-Explorer-Git-folders-and-files.png" rel="lightbox[2998]"><img class="aligncenter size-full wp-image-3010" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/Windows-Explorer-Git-folders-and-files.png" alt="" height="600" width="800" srcset="https://blog.discountasp.net/wp-content/uploads/2011/08/Windows-Explorer-Git-folders-and-files.png 800w, https://blog.discountasp.net/wp-content/uploads/2011/08/Windows-Explorer-Git-folders-and-files-300x225.png 300w" sizes="(max-width: 800px) 100vw, 800px"></a></p>
+<p>You should see something that’s familiar in the Solution Explorer since you’re probably used to see yellow plus symbols to denote that there are new files.</p>
+<p><a href="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/Visual-Studio-2010-Solution-Explorer-New-Files.png" rel="lightbox[2998]"><img class="aligncenter size-full wp-image-3006" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/Visual-Studio-2010-Solution-Explorer-New-Files.png" alt="" height="362" width="215" srcset="https://blog.discountasp.net/wp-content/uploads/2011/08/Visual-Studio-2010-Solution-Explorer-New-Files.png 215w, https://blog.discountasp.net/wp-content/uploads/2011/08/Visual-Studio-2010-Solution-Explorer-New-Files-178x300.png 178w" sizes="(max-width: 215px) 100vw, 215px"></a></p>
+<p>Since I’m working on a new Project, I’ll commit the new files by using the “Git – Pending Changes…” option.</p>
+<p><a href="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/Visual-Studio-2010-Solution-Explorer-Pending-Changes.png" rel="lightbox[2998]"><img class="aligncenter size-full wp-image-3007" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/Visual-Studio-2010-Solution-Explorer-Pending-Changes.png" alt="" height="456" width="510" srcset="https://blog.discountasp.net/wp-content/uploads/2011/08/Visual-Studio-2010-Solution-Explorer-Pending-Changes.png 510w, https://blog.discountasp.net/wp-content/uploads/2011/08/Visual-Studio-2010-Solution-Explorer-Pending-Changes-300x268.png 300w" sizes="(max-width: 510px) 100vw, 510px"></a></p>
+<p><a href="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/Git-Commit-Pending-Changes.png" rel="lightbox[2998]"><img class="aligncenter size-full wp-image-3000" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/Git-Commit-Pending-Changes.png" alt="" height="450" width="450" srcset="https://blog.discountasp.net/wp-content/uploads/2011/08/Git-Commit-Pending-Changes.png 450w, https://blog.discountasp.net/wp-content/uploads/2011/08/Git-Commit-Pending-Changes-150x150.png 150w, https://blog.discountasp.net/wp-content/uploads/2011/08/Git-Commit-Pending-Changes-300x300.png 300w" sizes="(max-width: 450px) 100vw, 450px"></a></p>
+<p>All of the files that have been committed have a green check mark next to them.</p>
+<p><a href="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/Visual-Studio-2010-Committed-Files.png" rel="lightbox[2998]"><img class="aligncenter size-full wp-image-3002" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/Visual-Studio-2010-Committed-Files.png" alt="" height="357" width="209" srcset="https://blog.discountasp.net/wp-content/uploads/2011/08/Visual-Studio-2010-Committed-Files.png 209w, https://blog.discountasp.net/wp-content/uploads/2011/08/Visual-Studio-2010-Committed-Files-175x300.png 175w" sizes="(max-width: 209px) 100vw, 209px"></a></p>
+<p>I’ve added a new file and made a change to an existing file and the markers are very easy to understand.</p>
+<p><a href="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/Visual-Studio-2010-Solution-Explorer-New-and-Modified-Files.png" rel="lightbox[2998]"><img class="aligncenter size-full wp-image-3005" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/Visual-Studio-2010-Solution-Explorer-New-and-Modified-Files.png" alt="" height="354" width="214" srcset="https://blog.discountasp.net/wp-content/uploads/2011/08/Visual-Studio-2010-Solution-Explorer-New-and-Modified-Files.png 214w, https://blog.discountasp.net/wp-content/uploads/2011/08/Visual-Studio-2010-Solution-Explorer-New-and-Modified-Files-181x300.png 181w" sizes="(max-width: 214px) 100vw, 214px"></a></p>
+<p>I’ll commit the pending changes.</p>
+<p><a href="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/Committing-an-Update-and-Adding-a-New-File.png" rel="lightbox[2998]"><img class="aligncenter size-full wp-image-2999" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/Committing-an-Update-and-Adding-a-New-File.png" alt="" height="450" width="450" srcset="https://blog.discountasp.net/wp-content/uploads/2011/08/Committing-an-Update-and-Adding-a-New-File.png 450w, https://blog.discountasp.net/wp-content/uploads/2011/08/Committing-an-Update-and-Adding-a-New-File-150x150.png 150w, https://blog.discountasp.net/wp-content/uploads/2011/08/Committing-an-Update-and-Adding-a-New-File-300x300.png 300w" sizes="(max-width: 450px) 100vw, 450px"></a></p>
+<p>To define a main repository and push your work, just right-click on your Project name from the Solution Explorer, run your mouse over “Git (master)” and then select the “Push” option.</p>
+<p><a href="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/Visual-Studio-2010-Solution-Explorer-Git-Push.png" rel="lightbox[2998]"><img class="aligncenter size-full wp-image-3004" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/Visual-Studio-2010-Solution-Explorer-Git-Push.png" alt="" height="486" width="722" srcset="https://blog.discountasp.net/wp-content/uploads/2011/08/Visual-Studio-2010-Solution-Explorer-Git-Push.png 722w, https://blog.discountasp.net/wp-content/uploads/2011/08/Visual-Studio-2010-Solution-Explorer-Git-Push-300x201.png 300w" sizes="(max-width: 722px) 100vw, 722px"></a></p>
+<p><a href="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/Git-Push-Options.png" rel="lightbox[2998]"><img class="aligncenter size-full wp-image-3001" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/Git-Push-Options.png" alt="" height="323" width="578" srcset="https://blog.discountasp.net/wp-content/uploads/2011/08/Git-Push-Options.png 578w, https://blog.discountasp.net/wp-content/uploads/2011/08/Git-Push-Options-300x167.png 300w" sizes="(max-width: 578px) 100vw, 578px"></a></p>
+<p>I hope that the information helps as this is the same method that I’ve taken to get used to the Git command-line commands while working at the same time.</p>
+<div class="ourlinks"><a href="https://plus.google.com/116621492559374108251?rel=author" target="_blank"><i>Add Joseph Jun to your Google+ circles.</i></a><br>
+<a href="http://www.discountasp.net/go/go.aspx?i=20819" target="_blank"><i>Visit DiscountASP.NET to learn more about our ASP.NET hosting services.</i></a></div>
+<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-2998" class="share-twitter sd-button share-icon" href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/?share=twitter" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-2998" class="share-facebook sd-button share-icon" href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/?share=facebook" target="_blank" title="Click to share on Facebook"><span>Facebook</span></a></li><li class="share-linkedin"><a rel="nofollow" data-shared="sharing-linkedin-2998" class="share-linkedin sd-button share-icon" href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/?share=linkedin" target="_blank" title="Click to share on LinkedIn"><span>LinkedIn</span></a></li><li class="share-email"><a rel="nofollow" data-shared="" class="share-email sd-button share-icon" href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/?share=email" target="_blank" title="Click to email this to a friend"><span>Email</span></a></li><li class="share-print"><a rel="nofollow" data-shared="" class="share-print sd-button share-icon" href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/#print" target="_blank" title="Click to print"><span>Print</span></a></li><li class="share-end"></li></ul></div></div></div>	</div><!-- .entry-content -->
+	
+	<footer class="entry-meta">
+		
+			</footer><!-- .entry-meta -->
+</article><!-- #post -->
+						<nav class="navigation post-navigation" role="navigation">
+		<h1 class="screen-reader-text">Post navigation</h1>
+		<div class="nav-links">
+
+			<a href="https://blog.discountasp.net/ever-wonder-how-google-updates-their-search-algorithms/" rel="prev"><span class="meta-nav">←</span> Ever wonder how Google updates their search algorithms?</a>			<a href="https://blog.discountasp.net/vote-for-discountasp-net-at-the-2011-devproconnections-community-choice-awards/" rel="next">Vote for DiscountASP.NET in the 2011 DevProConnections Community Choice Awards <span class="meta-nav">→</span></a>
+		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+					
+<div id="comments" class="comments-area">
+
+			<h2 class="comments-title">
+			19 thoughts on “<span>Using Git with Visual Studio 2010, an introduction</span>”		</h2>
+
+		<ol class="comment-list">
+					<li id="comment-10727" class="comment even thread-even depth-1">
+			<article id="div-comment-10727" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+												<b class="fn"><a href="http://dasptv.com/" rel="external nofollow" class="url">Mark Wisecarver</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/#comment-10727">
+							<time datetime="2011-09-01T12:58:08+00:00">
+								September 1, 2011 at 12:58 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Excellent post, very well done.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/?replytocom=10727#respond" onclick="return addComment.moveForm( &quot;div-comment-10727&quot;, &quot;10727&quot;, &quot;respond&quot;, &quot;2998&quot; )" aria-label="Reply to Mark Wisecarver">Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-20187" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-20187" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+												<b class="fn"><a href="http://alski.net/" rel="external nofollow" class="url">AlSki</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/#comment-20187">
+							<time datetime="2011-11-01T15:54:21+00:00">
+								November 1, 2011 at 3:54 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I personally have found that Mercurial (Hg) has better tools for windows, although git is catching up. You can still use tortoiseHg and therefore VisualHg (the VS plugin) to perform the same operations as above, and if you really love git you can even use the hg-git plugin to allow you to sync back with your git repository <a href="http://hg-git.github.com/">http://hg-git.github.com/</a></p>
+<p>Enjoy whichever you choose.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/?replytocom=20187#respond" onclick="return addComment.moveForm( &quot;div-comment-20187&quot;, &quot;20187&quot;, &quot;respond&quot;, &quot;2998&quot; )" aria-label="Reply to AlSki">Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-20383" class="comment even thread-even depth-1">
+			<article id="div-comment-20383" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+												<b class="fn">riper</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/#comment-20383">
+							<time datetime="2011-11-15T00:28:11+00:00">
+								November 15, 2011 at 12:28 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Great article!<br>
+What advice would you have to someone using VS2008? (yes unfortunately we partly have to since Windows Mobile is not supported in VS2010)<br>
+Some other plugin available?</p>
+<p>Cheers</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/?replytocom=20383#respond" onclick="return addComment.moveForm( &quot;div-comment-20383&quot;, &quot;20383&quot;, &quot;respond&quot;, &quot;2998&quot; )" aria-label="Reply to riper">Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-20384" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-20384" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+												<b class="fn">riper</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/#comment-20384">
+							<time datetime="2011-11-15T00:32:25+00:00">
+								November 15, 2011 at 12:32 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Ok I just realized there is the same plugin (but another install) for VS2008 as well, <a href="http://gitscc.codeplex.com/releases/view/46589">http://gitscc.codeplex.com/releases/view/46589</a>  🙂</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/?replytocom=20384#respond" onclick="return addComment.moveForm( &quot;div-comment-20384&quot;, &quot;20384&quot;, &quot;respond&quot;, &quot;2998&quot; )" aria-label="Reply to riper">Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-20828" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://mihasi.co.cc/wpblog/?p=39" rel="external nofollow" class="url">3.5 hours of Git « Mihasi</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-21059" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-21059" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+												<b class="fn">unexpectedkas</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/#comment-21059">
+							<time datetime="2011-12-25T20:10:15+00:00">
+								December 25, 2011 at 8:10 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi,</p>
+<p>I am very new to Git, but as far is i’ve readed, you are not uploading your repository to anywhere.</p>
+<p>What if I have a Git server (either a custom installation or on github) ? How have I to configure gitextensions or git source control provider?</p>
+<p>Thanks</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/?replytocom=21059#respond" onclick="return addComment.moveForm( &quot;div-comment-21059&quot;, &quot;21059&quot;, &quot;respond&quot;, &quot;2998&quot; )" aria-label="Reply to unexpectedkas">Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-25853" class="comment even thread-even depth-1 parent">
+			<article id="div-comment-25853" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+												<b class="fn">Mario Meier</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/#comment-25853">
+							<time datetime="2012-06-02T08:05:07+00:00">
+								June 2, 2012 at 8:05 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I am using Visual Basic Studio 2010 Express and it does not work!</p>
+<p>Do I have to buy the professional edition to use it?</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/?replytocom=25853#respond" onclick="return addComment.moveForm( &quot;div-comment-25853&quot;, &quot;25853&quot;, &quot;respond&quot;, &quot;2998&quot; )" aria-label="Reply to Mario Meier">Reply</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-27969" class="comment odd alt depth-2">
+			<article id="div-comment-27969" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+												<b class="fn">Charles Buege</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/#comment-27969">
+							<time datetime="2012-07-02T09:01:44+00:00">
+								July 2, 2012 at 9:01 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Mario – </p>
+<p>You are correct.  You need the paid versions to be able to do this.</p>
+<p>Charles</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/?replytocom=27969#respond" onclick="return addComment.moveForm( &quot;div-comment-27969&quot;, &quot;27969&quot;, &quot;respond&quot;, &quot;2998&quot; )" aria-label="Reply to Charles Buege">Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-31432" class="comment even depth-2">
+			<article id="div-comment-31432" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+												<b class="fn">Kevin</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/#comment-31432">
+							<time datetime="2012-11-02T19:55:34+00:00">
+								November 2, 2012 at 7:55 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>You can’t install plug-in with any Express edition</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/?replytocom=31432#respond" onclick="return addComment.moveForm( &quot;div-comment-31432&quot;, &quot;31432&quot;, &quot;respond&quot;, &quot;2998&quot; )" aria-label="Reply to Kevin">Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-27847" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://luizcorreia.eti.br/index.php/usando-git-com-o-visual-studio/" rel="external nofollow" class="url">Usando Git com o Visual Studio | Luiz Correia Desenvolvimento</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-30684" class="comment even thread-even depth-1">
+			<article id="div-comment-30684" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+												<b class="fn">donPab</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/#comment-30684">
+							<time datetime="2012-09-01T21:34:15+00:00">
+								September 1, 2012 at 9:34 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I am new to GIT, and would like to maintain–<br>
+  <a href="https://github.com/epsylon3/odbgscript">https://github.com/epsylon3/odbgscript</a><br>
+I have Visual Studio 2008 Pro up and running.<br>
+I have installed Git Extensions<br>
+I have installed Git Source Control Provider…<br>
+  and have set the paths according to the example above.</p>
+<p>I don’t know how to receive the drop down …Build.Rebuild.Clean..GIT-New Repository…<br>
+Do I File/New/-what kind???  or File/Open/???<br>
+  in order to begin maint of the above GIT files?<br>
+tkx, Paul</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/?replytocom=30684#respond" onclick="return addComment.moveForm( &quot;div-comment-30684&quot;, &quot;30684&quot;, &quot;respond&quot;, &quot;2998&quot; )" aria-label="Reply to donPab">Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-31873" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://geek.sylvainw.com/2012/04/01/git-er-done/" rel="external nofollow" class="url">Git ‘er done!</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-37895" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://ilmatte.wordpress.com/2013/02/12/setting-up-git-with-visual-studio-tutorial/" rel="external nofollow" class="url">Setting up Git With Visual Studio Tutorial « My view on C#</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-45355" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://devattitude.wordpress.com/2013/04/23/enalces-sobre-git/" rel="external nofollow" class="url">Enalces sobre git | Dev attitude</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-61722" class="comment even thread-even depth-1">
+			<article id="div-comment-61722" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+												<b class="fn">Marcelo Stadtlober</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/#comment-61722">
+							<time datetime="2014-02-18T07:19:08+00:00">
+								February 18, 2014 at 7:19 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hello Mr. Jun!<br>
+I found your tutorial and it helped me so much. Well, I’m from Brazil then I would like to translate it to portuguese and public it. May I?</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/?replytocom=61722#respond" onclick="return addComment.moveForm( &quot;div-comment-61722&quot;, &quot;61722&quot;, &quot;respond&quot;, &quot;2998&quot; )" aria-label="Reply to Marcelo Stadtlober">Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-201224" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-201224" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+												<b class="fn">Areeb</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/#comment-201224">
+							<time datetime="2014-12-24T01:39:35+00:00">
+								December 24, 2014 at 1:39 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Very useful information. Worked like a charm for VS2010</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/?replytocom=201224#respond" onclick="return addComment.moveForm( &quot;div-comment-201224&quot;, &quot;201224&quot;, &quot;respond&quot;, &quot;2998&quot; )" aria-label="Reply to Areeb">Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-222853" class="comment even thread-even depth-1">
+			<article id="div-comment-222853" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+												<b class="fn">Todd Morrow</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/#comment-222853">
+							<time datetime="2015-03-06T13:11:12+00:00">
+								March 6, 2015 at 1:11 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Thanks! How do you set up a shared repository that the whole team can use (on the LAN)?</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/?replytocom=222853#respond" onclick="return addComment.moveForm( &quot;div-comment-222853&quot;, &quot;222853&quot;, &quot;respond&quot;, &quot;2998&quot; )" aria-label="Reply to Todd Morrow">Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-223201" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-223201" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+												<b class="fn">Ereen</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/#comment-223201">
+							<time datetime="2015-03-08T03:50:09+00:00">
+								March 8, 2015 at 3:50 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi,<br>
+I am very new to Git. i have question about how can i log in to gitlab website from VS2010 (my own website that develop by visual studio 2010 ). I read more but don’t know anything about it. Thanks for your help.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/?replytocom=223201#respond" onclick="return addComment.moveForm( &quot;div-comment-223201&quot;, &quot;223201&quot;, &quot;respond&quot;, &quot;2998&quot; )" aria-label="Reply to Ereen">Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-273207" class="comment even thread-even depth-1">
+			<article id="div-comment-273207" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+												<b class="fn">Arun Pahilajani</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/#comment-273207">
+							<time datetime="2015-09-03T07:09:24+00:00">
+								September 3, 2015 at 7:09 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Excellent post !</p>
+<p>Just an fyi – the plugin doesn’t work very well, if you customize your theme in visual studio.  It just couldn’t display my pending changes list items.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/?replytocom=273207#respond" onclick="return addComment.moveForm( &quot;div-comment-273207&quot;, &quot;273207&quot;, &quot;respond&quot;, &quot;2998&quot; )" aria-label="Reply to Arun Pahilajani">Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+		
+		
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="https://blog.discountasp.net/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="">
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200"></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="2998" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="afec83f6e1"></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"> <label class="subscribe-label" id="subscribe-label" for="subscribe_comments">Notify me of follow-up comments by email.</label></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog">Notify me of new posts by email.</label></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="143"></p>			</form>
+			</div><!-- #respond -->
+	<p class="akismet_comment_form_privacy_notice">This site uses Akismet to reduce spam. <a href="https://akismet.com/privacy/" target="_blank">Learn how your comment data is processed</a>.</p>
+</div><!-- #comments -->
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+  </div>
+</div>
+
+      <div class="row" style="margin-top:80px">
+        <div class="col-md-10 col-md-offset-1">
+          <form role="search" method="get" class="search-form" action="https://blog.discountasp.net/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search …" value="" name="s">
+				</label>
+				<input type="submit" class="search-submit" value="Search">
+			</form>        </div>
+      </div>
+
+      <div class="row" style="margin-top:90px">
+        <div class="col-md-10 col-md-offset-1">
+          <p><span class="fa fa-feed fa-fw text-default"></span>&nbsp;&nbsp;&nbsp;<a href="https://blog.discountasp.net/feed/">RSS Feed</a></p>
+          <p><span class="fa fa-institution fa-fw text-default"></span>&nbsp;&nbsp;&nbsp;<a href="https://blog.discountasp.net/archive/">Blog Archive</a></p>
+          <p><span class="fa fa-comment-o fa-fw text-default"></span>&nbsp;&nbsp;&nbsp;<a href="http://community.discountasp.net/" target="_blank">Community Forum</a></p>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top:80px">
+        <div class="col-md-11">
+          <script type="text/javascript" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/tp.widget.sync.bootstrap.min.js.téléchargement"></script>
+        <div class="trustpilot-widget" data-locale="en-US" data-template-id="54ad5defc6454f065c28af8b" data-businessunit-id="542f036800006400057ab61d" data-style-height="220px" data-style-width="100%" data-theme="light" data-stars="4,5" style="position: relative;"><iframe frameborder="0" scrolling="no" title="Customer reviews powered by Trustpilot" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/index.html" style="position: relative; height: 220px; width: 100%; border-style: none; display: block; overflow: hidden;"></iframe></div>
+        </div>
+      </div>
+
+  </div>
+</div>
+  
+
+            <!-- Begin Footer -->
+            <footer id="footer" class="clearfix ">
+                <div class="footer">
+                    <div class="container">
+                        <div class="footer-inner">
+                            <div class="row">
+
+                                <div class="col-md-2">
+                                    <div class="footer-content">
+                                        <nav>
+                                            <ul class="nav nav-pills nav-stacked">
+                                                <li><a href="http://www.discountasp.net/about-us/news/">Press</a></li>
+                                                <li><a href="http://blog.discountasp.net/" target="_blank">Blog</a></li>
+                                                <li><a href="http://www.discountasp.net/asp.net-hosting/labs/">Labs</a></li>
+                                                <li><a href="https://plus.google.com/+DiscountaspNet/videos" target="_blank">Video</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <div class="footer-content">
+                                        <nav>
+                                            <ul class="nav nav-pills nav-stacked">
+                                                <li><a href="http://www.discountasp.net/policies/">Policies</a></li>
+                                                <li><a href="http://www.discountasp.net/policies/privacy/">Privacy</a></li>
+                                                <li><a href="http://www.discountasp.net/about-us/careers/">Careers</a></li>
+                                                <li><a href="http://www.discountasp.net/control-panel/api/">API</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="footer-content">
+                                        <nav>
+                                            <ul class="nav nav-pills nav-stacked">
+                                                <li><a href="http://www.discountasp.net/services/deals/">Deals</a></li>
+                                                <li><a href="http://www.discountasp.net/sitemap/">Sitemap</a></li>
+                                                <li><a href="http://www.discountasp.net/about-us/contact/">Contact us</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-5">
+                                    <div class="footer-content">
+                                        <h2 class="title">Contact DiscountASP.NET</h2>
+                                        <ul class="social-links circle animated-effect-1">
+                                            <li class="facebook"><a target="_blank" href="https://www.facebook.com/DiscountASPNET"><i class="fa fa-facebook"></i></a></li>
+                                            <li class="twitter"><a target="_blank" href="https://twitter.com/Discountasp"><i class="fa fa-twitter"></i></a></li>
+                                            <li class="googleplus"><a target="_blank" href="https://plus.google.com/+DiscountaspNet/posts"><i class="fa fa-google-plus"></i></a></li>
+                                        </ul>
+                                        <ul class="list-icons">
+                                            <li><i class="fa fa-map-marker pr-10 text-default"></i>417 East Huntington Drive, Suite 200, Monrovia, CA 91016</li>
+                                            <li><a href="mailto:info@discountasp.net"><i class="fa fa-envelope-o pr-10"></i>info@DiscountASP.NET</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subfooter">
+                    <div class="container">
+                        <div class="subfooter-inner">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <img src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/discountASP-NET-logo-grey.png" alt="DiscountASP.NET Web Hosting">
+                                </div>
+                                <div class="col-md-10" style="padding-top: 8px">
+<p>©2019 DiscountASP.NET All rights reserved. All trademarks are property of their legal owners.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </footer>
+        
+        <!-- End Footer -->
+    
+
+        <!-- Scroll to top -->
+        <script type="text/javascript" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/modernizr.js.téléchargement"></script>
+        <!-- Contact form -->
+        <script src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/jquery.validate.js.téléchargement"></script>
+        <!-- SmoothScroll javascript -->
+        <script type="text/javascript" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/jquery.browser.js.téléchargement"></script>
+        <script type="text/javascript" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/SmoothScroll.js.téléchargement"></script>
+        <!-- Initialization of Plugins -->
+        <script type="text/javascript" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/template.js.téléchargement"></script>
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-28311528-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<!-- AdRoll -->
+<script type="text/javascript">
+    adroll_adv_id = "MFLMWEESPBA6ZODOCPMXZS";
+    adroll_pix_id = "AQ4FUT7LMFFSJBRILOUWYZ";
+    /* OPTIONAL: provide email to improve user identification */
+    /* adroll_email = "username@example.com"; */
+    (function () {
+        var _onload = function(){
+            if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+            if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+            var scr = document.createElement("script");
+            var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+            scr.setAttribute('async', 'true');
+            scr.type = "text/javascript";
+            scr.src = host + "/j/roundtrip.js";
+            ((document.getElementsByTagName('head') || [null])[0] ||
+                document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+        };
+        if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+        else {window.attachEvent('onload', _onload)}
+    }());
+</script>
+
+<!-- Google Remarketing -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1072294937;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/f(1).txt">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1072294937/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<!-- Bing -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"4012435"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><noscript><img src="//bat.bing.com/action/0?ti=4012435&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+
+<!-- Crazy Egg -->
+<script type="text/javascript">
+    setTimeout(function () {
+        var a = document.createElement("script");
+        var b = document.getElementsByTagName("script")[0];
+        a.src = document.location.protocol + "//script.crazyegg.com/pages/scripts/0013/0893.js?" + Math.floor(new Date().getTime() / 3600000);
+        a.async = true; a.type = "text/javascript"; b.parentNode.insertBefore(a, b)
+    }, 1);
+</script>
+
+<!-- Start of LiveChat (www.livechatinc.com) code -->
+<script type="text/javascript">
+window.__lc = window.__lc || {};
+window.__lc.license = 4256491;
+(function() {
+  var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+  lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+})();
+</script>
+<!-- End of LiveChat code -->
+
+
+
+<script type="text/javascript" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/e-201915.js.téléchargement" async="async" defer="defer"></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:6.2.1',blog:'15937383',post:'2998',tz:'-7',srv:'blog.discountasp.net'} ]);
+	_stq.push([ 'clickTrackerInit', '15937383', '2998' ]);
+</script>
+<img src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/g.gif" alt=":)" width="6" height="5" id="wpstats"><div style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon0.235620580531831"><img style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon0.7554701883493675" width="0" height="0" alt="" src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/0"></div><script src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/get_dynamic_config.js.téléchargement"></script><script src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/get_static_config.3.2233.10.11.2886.1461.341.111.11.15.75.6.4.js.téléchargement"></script><script src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/localization.en.3.ed0c19a46f74b396a5a5653cc3512082_525643bca3cd6c55dbd224d150f179c.téléchargement"></script><div id="livechat-compact-container" style="position: fixed; bottom: 0px; right: 15px; width: 250px; height: 53px; overflow: hidden; visibility: hidden; z-index: 2147483639; background: transparent; border: 0px; transition: transform 0.2s ease-in-out 0s; backface-visibility: hidden; opacity: 0;"><iframe src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/saved_resource.html" id="livechat-compact-view" style="position: relative;top: 20px;left: 0;width: 100%;border: 0;padding: 0;margin: 0;float: none;background: none" scrolling="no" allowtransparency="true" title="LiveChat Minimized Widget"></iframe><a id="livechat-badge" href="https://blog.discountasp.net/using-git-with-visual-studio-2010-an-introduction-2/#" onclick="LC_API.show_full_view({source:&#39;minimized click&#39;});return false" style="position: absolute; display: block; visibility: hidden; height: 16px; line-height: 16px; background: rgb(255, 0, 0); color: rgb(255, 255, 255); font-size: 10px; text-decoration: none; width: 16px; border-radius: 50%; box-shadow: none; border-top: 0px; padding: 0px; text-align: center; font-family: Lato, sans-serif; top: 12px; left: 20px; opacity: 0;"></a></div><div id="livechat-full" style="position: fixed; bottom: 0px; right: 15px; width: 400px; height: 450px; overflow: hidden; visibility: hidden; z-index: -1; background: transparent; border: 0px; transition: transform 0.2s ease-in-out 0s; backface-visibility: hidden; opacity: 0;"><iframe src="./Using Git with Visual Studio 2010, an introduction _ DiscountASP.NET_files/open_chat.html" id="livechat-full-view" name="livechat-full-view" title="LiveChat Widget" scrolling="no" allowtransparency="true" allow="autoplay" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%; border: 0px; padding: 0px; margin: 0px; float: none; background: none;"></iframe></div><div id="lc_invite_layer" style="text-align: left; display: none; z-index: 16777261;"></div><div id="lc_overlay_layer" style="background-color: rgb(0, 0, 0); position: fixed; left: 0px; top: 0px; z-index: 16777260; display: none; width: 100%; height: 100%;"></div><script id="livechat-ping" src="https://secure.livechatinc.com/licence/4256491/v2/ping?t=1554976614033&amp;data=%7B%22visitor%22%3A%7B%22id%22%3A%22S1554976003.8e7b00e751%22%7D%7D&amp;jsonp=__lc_ping_799356"></script></body></html>
