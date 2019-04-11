@@ -1,0 +1,263 @@
+/*
+ Theme Name:   DiscountASP.NET
+ Theme URI:  http://discountasp.net/
+ Description:  DiscountASP.NET WordPress Theme
+ Author:     mjp
+ Author URI:   http://discountasp.net/
+ Template:   twentythirteen
+ Version:    1.0.0
+ License:    GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:     DiscountASP.NET WordPress Theme
+ Text Domain:  discount
+*/
+
+.entry-title a {
+  color: #333333 !important;
+}
+
+.entry-title {
+  font-size: 42px;
+  line-height: 110%;
+  margin-bottom: 21px;
+}
+
+a:visited {
+  color: #0088CC;
+}
+
+.entry-content a, .comment-content a {
+  color: #0088CC;
+}
+
+.nav-menu .current_page_item > a,
+.nav-menu .current_page_ancestor > a,
+.nav-menu .current-menu-item > a,
+.nav-menu .current-menu-ancestor > a {
+  color: #0088CC;
+}
+
+.entry-meta a {
+  color: #0088CC;
+}
+
+.entry-meta a:hover {
+  color: #0088CC;
+}
+
+.format-link .entry-title a {
+  color: #0088CC;
+}
+
+.navigation a {
+  color: #0088CC;
+}
+
+.comment-author .fn,
+.comment-author .url,
+.comment-reply-link,
+.comment-reply-login {
+  color: #0088CC;
+}
+
+.widget a {
+  color: #0088CC;
+}
+
+.entry-meta {
+  padding-bottom: 14px;
+}
+
+.paging-navigation {
+  background-color: #ffffff;
+  padding: 30px 0;
+}
+
+.entry-header, .entry-content, .entry-summary, .entry-meta {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+.hentry {
+  padding: 0 0 40px 0;
+}
+
+.comments-title, .comment-list, .comment-reply-title, .must-log-in, .comment-respond .comment-form, .comment-respond iframe {
+  max-width: 100%;
+}
+
+.comment-respond {
+  background-color: #ffffff;
+  padding: 0 0;
+}
+
+.post-navigation {
+  color: #0c9ec7;
+  padding: 20px 0 40px 0;
+}
+
+.edit-link {
+  display: none;
+}
+
+.alignleft {
+  float: left;
+  position: relative;
+}
+
+.alignright {
+  float: right;
+  postion: relative;
+  margin-left: 14px;
+}
+
+.smallprint {
+  font-size: 10px;
+}
+
+.todiscount A:link {
+  color: #0088CC;
+  text-decoration: none;
+}
+
+.todiscount A:visited {
+  color: #0088CC;
+  text-decoration: none;
+}
+
+.todiscount A:active {
+  color: #0088CC;
+  text-decoration: none;
+}
+
+.todiscount A:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.todiscount {
+  float: right;
+  font-size: 12px;
+  font-weight: normal!important;
+  font-family: Arial, sans-serif;
+}
+
+.ourlinks A:link {
+  color: #0088CC;
+  text-decoration: none;
+}
+
+.ourlinks A:visited {
+  color: #0088CC;
+  text-decoration: none;
+}
+
+.ourlinks A:active {
+  color: #0088CC;
+  text-decoration: none;
+}
+
+.ourlinks A:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.ourlinks {
+  margin: 21px 0;
+  font-size: 14px;
+  font-weight: normal!important;
+  font-family: Arial, sans-serif;
+}
+
+.youtube-embed {
+  margin-top: 21px;
+  margin-bottom: 28px;
+}
+
+.imgpad {
+  margin: 7px 0 21px 35px;
+}
+
+.imgpadleft {
+  margin: 7px 35px 21px 0;
+}
+
+.imgpadtopbottom {
+  margin: 40px 0 !important;
+}
+
+.imgpadtutorial {
+  margin: 20px 0 50px;
+}
+
+.imgpadsmall {
+  margin: 35px 0;
+}
+
+.tm-click-to-tweet {
+  margin: 25px 0 45px;
+}
+
+.syntaxhighlighter {
+  margin: 2em 0 !important;
+}
+
+.entry-content blockquote {
+  font-size: 90%;
+}
+
+.format-quote blockquote:before {
+  content: ;
+  font-size: 0px;
+  font-weight: 400;
+  line-height: .8;
+  padding-right: 25px;
+  position: absolute;
+  left: -15px;
+  top: -3px;
+}
+
+.archive-header {
+  background-color: #ffffff;
+}
+
+.archive-title, .archive-meta {
+  padding: 14px 0 10px 0;
+}
+
+.page-header {
+  background-color: #ffffff;
+}
+
+.page-header {
+  padding-bottom: 0px !important;
+  margin: 0px 0 0px !important;
+  border-bottom: 0px solid #fff !important;
+}
+
+.page-title {
+  padding: 14px 0 10px 0;
+}
+
+.paging-navigation .meta-nav {
+	background-color: #0c9ec7;
+}
+
+.paging-navigation .nav-next {
+    padding: 0;
+}
+
+.paging-navigation .nav-previous .meta-nav {
+	padding: 3px 0 8px;
+	width: 50px;
+}
+
+.paging-navigation .nav-next .meta-nav {
+	padding: 3px 0 8px;
+	width: 50px;
+}
+
+#wpstats {
+  display: none;
+}
